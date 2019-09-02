@@ -6,7 +6,8 @@ import java.util.List;
 public class Combiner {
     private static Combiner combiner = new Combiner();
     private  static List<Character> resultListOfSymbols = new LinkedList<>();
-
+    private Combiner() {
+    }
 
     public static Combiner getInstance() {
         return combiner;
@@ -23,6 +24,5 @@ public class Combiner {
         return result.toString();
 
     }
-    private Combiner() {
-    }
+
 }

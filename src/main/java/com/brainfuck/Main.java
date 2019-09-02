@@ -10,8 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Interpreter interpreter = new Interpreter(inputCommand());
         interpreter.run();
-        System.out.println(Cells.getInstance().getCurrentElement());
-        System.out.println("Result :" + Combiner.getInstance().getResult());
+        System.out.println("Result : " + Combiner.getInstance().getResult());
 
     }
     private static String inputCommand(){

@@ -6,16 +6,17 @@ import com.brainfuck.command.implementation.LoopHandler;
 
 public class Interpreter {
     private char[] commandInArray;
-    private int pointerToCurrentCommand =0;
+    private int pointerToCurrentCommand;
     public Interpreter(String initialCommand) {
         commandInArray = initialCommand.toCharArray();
+       this.pointerToCurrentCommand = 0;
     }
     public void run() {
         char symbol;
         for (pointerToCurrentCommand = 0; pointerToCurrentCommand < commandInArray.length; pointerToCurrentCommand++) {
             symbol = commandInArray[pointerToCurrentCommand];
             if (symbol == '[') {
-               handleLoop2().execute();
+               handleLoop().execute();
             }
             else {
                     CommandFactory.createCommand(symbol).execute();
@@ -23,12 +24,12 @@ public class Interpreter {
             }
         }
 
-    public LoopHandler handleLoop2(){
+    private LoopHandler handleLoop(){
         LoopHandler loopHandler = new LoopHandler();
         pointerToCurrentCommand++;
         do{
             if(commandInArray[pointerToCurrentCommand]=='[') {
-               loopHandler.addToExecuteList(handleLoop2());
+               loopHandler.addToExecuteList(handleLoop());
                 continue;
             }
 

@@ -11,9 +11,9 @@ public class Cells {
     private static Cells cells = new Cells();
 
     private Cells(){
-        operatedSymbols = new byte[INITIALSIZE];
-        currentSize = 0;
-        pointer=0;
+        this.operatedSymbols = new byte[INITIALSIZE];
+       this.currentSize = 0;
+        this.pointer=0;
     }
     public static Cells getInstance(){
         return cells;
@@ -45,7 +45,7 @@ public class Cells {
     public byte getCurrentElement(){
         return operatedSymbols[pointer];
     }
-    public void increaseSizeOfArray(){
+    private void increaseSizeOfArray(){
         calculateNewSize();
         byte temporaryCells[] = new byte[currentSize];
         for(int i = 0; i< operatedSymbols.length; i++){
