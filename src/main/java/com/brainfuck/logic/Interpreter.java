@@ -2,7 +2,7 @@ package com.brainfuck.logic;
 
 import com.brainfuck.command.Command;
 import com.brainfuck.command.CommandFactory;
-import com.brainfuck.command.implementation.LoopHandler;
+import com.brainfuck.command.LoopHandler;
 
 public class Interpreter {
     private char[] commandInArray;

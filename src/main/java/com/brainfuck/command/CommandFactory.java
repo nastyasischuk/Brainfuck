@@ -1,6 +1,5 @@
 package com.brainfuck.command;
 
-import com.brainfuck.command.implementation.*;
 import com.brainfuck.exceptions.UnsupportedCommand;
 
 

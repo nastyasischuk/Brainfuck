@@ -1,4 +1,4 @@
-package com.brainfuck.command.implementation;
+package com.brainfuck.command;
 
 import com.brainfuck.command.Command;
 
